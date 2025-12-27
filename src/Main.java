@@ -3,10 +3,10 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Задание 1");
-        int clientOs = 2;
+        int clientOs = 0;
         if (clientOs == 0) {
             System.out.println("Установите версию приложения для IOS по ссылке");
-        } else if (clientOs != 0) {
+        } else  {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
 
