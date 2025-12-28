@@ -3,12 +3,12 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Задание 1");
-        int clientOs = 1;// 0-IOS, 1-Android
+        int clientOs = 0;// 0-IOS, 1-Android
         if (clientOs == 0) {
             System.out.println("Установите версию приложения для IOS по ссылке");
-        } else if (clientOs==1){
+        } else if (clientOs == 1) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        }else {
+        } else {
             System.out.println("Не верная операционная система, укажите требуемую.");
         }
 
@@ -17,26 +17,25 @@ public class Main {
         int clientDeviceYear = 2014;// Год выпуска устройства
         if (clientOs == 1 && clientDeviceYear >= 2015) {
             System.out.println("Установите обычную версию приложения для IOS по ссылке");
-        }
-        if (clientOs == 1 && clientDeviceYear < 2015) {
+        } else if (clientOs == 1 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для IOS по ссылке");
         }
         if (clientOs == 0 && clientDeviceYear >= 2015) {
             System.out.println("Установите обычную версию приложения для Android по ссылке");
-        }
-        if (clientOs == 0 && clientDeviceYear < 2015) {
+        } else if (clientOs == 0 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
+
+
         System.out.println();
         System.out.println("Задание 3");
-        int year = 2020;
-        if (year > 1584) {
-            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-                System.out.println(year + " " + "Год является високосным");
-            } else {
-                System.out.println(year + " " + "Год не является високосным");
-            }
+        int year = 2021;
+        if (year > 1584 && (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println(year + " " + "Год является високосным");
+        } else {
+            System.out.println(year + " " + "Год не является високосным");
         }
+
 
         System.out.println();
         System.out.println("Задание 4");
