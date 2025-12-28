@@ -3,25 +3,28 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Задание 1");
-        int clientOs = 0;
+        int clientOs = 1;// 0-IOS, 1-Android
         if (clientOs == 0) {
             System.out.println("Установите версию приложения для IOS по ссылке");
-        } else  {
+        } else if (clientOs==1){
             System.out.println("Установите версию приложения для Android по ссылке");
+        }else {
+            System.out.println("Не верная операционная система, укажите требуемую.");
         }
 
         System.out.println();
         System.out.println("Задание 2");
-        int clientDeviceYear = 2012;
-        if (clientOs == 1) {
-            if (clientDeviceYear >= 2015) {
-                System.out.println("Установите обычную версию приложения для IOS по ссылке");
-            } else {
-                System.out.println("Установите облегченную версию приложения для IOS по ссылке");
-            }
-        } else if (clientOs != 1 && clientDeviceYear >= 2015) {
-            System.out.println("Установите лбычную версию приложения для Android по ссылке");
-        } else {
+        int clientDeviceYear = 2014;// Год выпуска устройства
+        if (clientOs == 1 && clientDeviceYear >= 2015) {
+            System.out.println("Установите обычную версию приложения для IOS по ссылке");
+        }
+        if (clientOs == 1 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для IOS по ссылке");
+        }
+        if (clientOs == 0 && clientDeviceYear >= 2015) {
+            System.out.println("Установите обычную версию приложения для Android по ссылке");
+        }
+        if (clientOs == 0 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
         System.out.println();
@@ -52,7 +55,7 @@ public class Main {
 
         System.out.println();
         System.out.println("задание 5");
-        int monthNumber = 6;
+        int monthNumber = 11;
         switch (monthNumber) {
             case 12:
             case 1:
@@ -74,10 +77,11 @@ public class Main {
             case 11:
                 System.out.println("Сезон: Осень.");
                 break;
-        }
-        if (monthNumber < 1 || monthNumber > 12) {
-            System.out.println("Номер месяца должен быть от 1 до 12: Ошибка.");
+            default:
+                System.out.println("Номер месяца должен быть от 1 до 12: Ошибка.");
         }
 
+
     }
+
 }
