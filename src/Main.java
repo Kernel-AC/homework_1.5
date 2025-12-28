@@ -2,14 +2,87 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        System.out.println("Задание 1");
+        int clientOs = 0;// 0-IOS, 1-Android
+        if (clientOs == 0) {
+            System.out.println("Установите версию приложения для IOS по ссылке");
+        } else if (clientOs == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else {
+            System.out.println("Не верная операционная система, укажите требуемую.");
         }
+
+        System.out.println();
+        System.out.println("Задание 2");
+        int clientDeviceYear = 2015;// Год выпуска устройства
+        if (clientOs == 1 && clientDeviceYear >= 2015) {
+            System.out.println("Установите обычную версию приложения для IOS по ссылке");
+        } else if (clientOs == 1 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для IOS по ссылке");
+        }
+        if (clientOs == 0 && clientDeviceYear >= 2015) {
+            System.out.println("Установите обычную версию приложения для Android по ссылке");
+        } else if (clientOs == 0 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        }
+
+
+        System.out.println();
+        System.out.println("Задание 3");
+        int year = 1601;
+        if (year <= 1584) {
+            System.out.println("Год введен не корректно, нужно ввести больше 1584");
+        } else if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println(year + " " + "Год является високосным");
+        } else {
+            System.out.println(year + " " + "Год не является високосным");
+        }
+
+
+        System.out.println();
+        System.out.println("Задание 4");
+        int deliveryDistance = 112;
+        int deliveryDays = 0;
+        if (deliveryDistance <= 20) {
+            deliveryDays = 1;
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+            deliveryDays = 2;
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            deliveryDays = 3;
+        } else {
+            System.out.println("Доставка на расстояние более 100 км не осуществляется.");
+        }
+        System.out.println("Потребутся дней:" + deliveryDays + " " + "срок доставки.");
+
+        System.out.println();
+        System.out.println("задание 5");
+        int monthNumber = 11;
+        switch (monthNumber) {
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("Сезон: Зима.");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Сезон: Весна.");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Сезон: Лето.");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Сезон: Осень.");
+                break;
+            default:
+                System.out.println("Номер месяца должен быть от 1 до 12: Ошибка.");
+        }
+
+
     }
+
 }
