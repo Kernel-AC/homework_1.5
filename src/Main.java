@@ -14,7 +14,7 @@ public class Main {
 
         System.out.println();
         System.out.println("Задание 2");
-        int clientDeviceYear = 2014;// Год выпуска устройства
+        int clientDeviceYear = 2015;// Год выпуска устройства
         if (clientOs == 1 && clientDeviceYear >= 2015) {
             System.out.println("Установите обычную версию приложения для IOS по ссылке");
         } else if (clientOs == 1 && clientDeviceYear < 2015) {
@@ -29,8 +29,10 @@ public class Main {
 
         System.out.println();
         System.out.println("Задание 3");
-        int year = 2021;
-        if (year > 1584 && (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        int year = 1601;
+        if (year <= 1584) {
+            System.out.println("Год введен не корректно, нужно ввести больше 1584");
+        } else if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
             System.out.println(year + " " + "Год является високосным");
         } else {
             System.out.println(year + " " + "Год не является високосным");
